@@ -58,6 +58,12 @@ ul li a:hover {
     padding: 0.5rem;
 }
 
+.active {
+    color: #304353;
+    background: #fff;
+    padding: 0.5rem;
+}
+
 div.hero-section {
     background: #304353;
     width: 100%;

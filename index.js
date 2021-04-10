@@ -24,8 +24,21 @@
 
 	});
 
-	const nav_sections = document.querySelectorAll('.section');
-	const nav = document.querySelector('.nav-bar');
-	let nav_height = nav.scrollTop;
+	const links = document.querySelectorAll('.nav-links a');
+	const sections = document.querySelectorAll('.section');
+
+	function changeLinkState() {
+		let index = sections.length;
+
+		while (--index && window.scrollY + 50 < sections[index].offsetTop) { 
+			continue
+		}
+
+		links.forEach((link) => link.classList.remove('active'));
+		links[index].classList.add('active');
+	}
+
+	changeLinkState();
+	window.addEventListener('scroll', changeLinkState);
 
 })();
